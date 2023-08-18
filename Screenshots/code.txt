@@ -1,1 +1,7 @@
-
+create a user - sudo useradd Suleiman_Awoyemi
+set an expiry date of 2weeks for the user - sudo useradd -e 2023-09-01 Suleiman_Awoyemi
+prompt the user to change there password on login - sudo passwd --expire Suleiman_Awoyemi
+create group called altschool - sudo groupadd ALTSchool
+to add user to the group to user - sudo usermod -aG ALTSchool Suleiman_Awoyemi
+allow altschool group to be able to run only cat command on /etc/ - sudo visudo add "%altschool ALL=(ALL:ALL) /bin/cat /etc/*" to the sudoer line 
+create another user. make sure that this user doesn't have a home directory - sudo useradd -M Ghost_without_home
